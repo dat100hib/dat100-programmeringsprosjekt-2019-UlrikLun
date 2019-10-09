@@ -16,10 +16,10 @@ public class GPSPoint {
 
 		// TODO - konstruktur
 		
-		time = 1;
-		latitude = 2.0;
-		longitude = 3.0;
-		elevation = 5;
+		this.time = time;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.elevation = elevation;
 		
 
 	}
@@ -32,10 +32,10 @@ public class GPSPoint {
 		
 		
 	}
-int t;
+
 	public void setTime(int time) {
 
-		time = t;
+		this.time = time;
 
 	}
 
@@ -44,10 +44,10 @@ int t;
 		return latitude;
 		
 	}
-double lat;
+
 	public void setLatitude(double latitude) {
 	
-		latitude = lat;		
+		this.latitude = latitude;		
 	}
 
 	public double getLongitude() {
@@ -55,10 +55,10 @@ double lat;
 		return longitude;
 		
 	}
-double longi;
+
 	public void setLongitude(double longitude) {
 		
-		longitude = longi;
+	this.longitude = longitude;
 		
 	}
 
@@ -67,10 +67,10 @@ double longi;
 		return elevation;
 		
 	}
-double ele;
+
 	public void setElevation(double elevation) {
 		
-		elevation = ele;
+		this.elevation = elevation;
 		
 	}
 	
