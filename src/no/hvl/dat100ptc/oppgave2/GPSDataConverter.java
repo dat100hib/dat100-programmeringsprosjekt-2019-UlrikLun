@@ -1,41 +1,35 @@
 package no.hvl.dat100ptc.oppgave2;
-
-import no.hvl.dat100ptc.TODO;
+import static java.lang.Integer.parseInt;
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
 
 public class GPSDataConverter {
 
-	// konverter tidsinformasjon i gps data punkt til antall sekunder fra midnatt
-	// dvs. ignorer information om dato og omregn tidspunkt til sekunder
-	// Eksempel - tidsinformasjon (som String): 2017-08-13T08:52:26.000Z
-    // skal omregnes til sekunder (som int): 8 * 60 * 60 + 52 * 60 + 26 
-	
-	private static int TIME_STARTINDEX = 11; // startindex for tidspunkt i timestr
 
 	public static int toSeconds(String timestr) {
 		
-		int secs;
-		int hr, min, sec;
+		String hour = timestr.substring(11,13);
+		String minutt = timestr.substring(14,16);
+		String sekund = timestr.substring(17,19);
 		
-		// TODO
-		// OPPGAVE - START
+		int hr = (parseInt(hour)*60*60);
+		int min = (parseInt(minutt)*60);
+		int sec = (parseInt(sekund));
 		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// OPPGAVE - SLUTT
+		int secs = (hr + min + sec);
 		
+		return secs;
+	
 	}
 
-	public static GPSPoint convert(String timeStr, String latitudeStr, String longitudeStr, String elevationStr) {
-
-		GPSPoint gpspoint;
-
-		// TODO - START ;
+	public static GPSPoint convert(String timeStr, String latitudeStr, String longitudeStr, 
+			String elevationStr) {
 		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// OPPGAVE - SLUTT ;
-	    
+		GPSPoint gpspoint = new GPSPoint( toSeconds(timeStr), 
+						Double.valueOf(latitudeStr),
+						Double.valueOf(longitudeStr), 
+						Double.valueOf(elevationStr));
+		
+		return gpspoint;
 	}
 	
 }
