@@ -15,9 +15,9 @@ public class GPSDataConverter {
 		int min = (parseInt(minutt)*60);
 		int sec = (parseInt(sekund));
 		
-		int secs = (hr + min + sec);
+		int secos = (hr + min + sec);
 		
-		return secs;
+		return secos;
 	
 	}
 
@@ -32,4 +32,4 @@ public class GPSDataConverter {
 		return gpspoint;
 	}
 	
-}
+	}
